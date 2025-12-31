@@ -1,52 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>Trading Plan</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f1115;
-      color: #eaeaea;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .box {
-      border: 1px solid #2a2d35;
-      padding: 20px 28px;
-      border-radius: 8px;
-      max-width: 360px;
-    }
-    h1 {
-      font-size: 18px;
-      margin-bottom: 14px;
-      text-align: center;
-    }
-    p {
-      margin: 6px 0;
-      font-size: 14px;
-    }
-    .rule {
-      margin-top: 12px;
-      font-weight: bold;
-      color: #00ff99;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Plan</title>
+
+<style>
+:root{
+  --bg:#05070b;
+  --card:#0c1018;
+  --line:#1a2030;
+  --neon:#7cffd1;
+  --text:#eaeaea;
+  --muted:#8b95a7;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:radial-gradient(circle at top,#0e1424,#05070b 75%);
+  font-family:system-ui,-apple-system,sans-serif;
+  color:var(--text);
+  display:flex;
+  justify-content:center;
+}
+
+.app{
+  width:100%;
+  max-width:420px;
+  padding:24px 16px 80px;
+}
+
+.header{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:900;
+  background:linear-gradient(90deg,#7cffd1,#6bc7ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 20px rgba(124,255,209,.35);
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
+}
+
+.item{
+  font-size:16px;
+  padding:10px 0;
+  border-bottom:1px dashed rgba(255,255,255,.06);
+}
+
+.item:last-child{border-bottom:none}
+
+.rule{
+  margin-top:16px;
+  padding:14px;
+  text-align:center;
+  font-weight:900;
+  border-radius:14px;
+  background:linear-gradient(90deg,#7cffd1,#6bc7ff);
+  color:#07110a;
+}
+
+/* CTA */
+.cta-wrap{
+  margin-top:22px;
+}
+
+.cta-btn{
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:18px;
+  border-radius:18px;
+  font-weight:900;
+  text-decoration:none;
+  color:#07110a;
+  background:linear-gradient(90deg,#25D366,#7cffd1);
+  box-shadow:0 0 25px rgba(37,211,102,.6);
+  animation:pulse 2s infinite ease-in-out;
+}
+
+.cta-note{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+  text-align:center;
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.03)}
+}
+</style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>Trading Plan</h1>
+<div class="app">
 
-    <p>Modal: $1.500</p>
-    <p>Lot: 0.01</p>
-    <p>Risk: $15 / hari (3x loss)</p>
-    <p>Risk / trade: $5</p>
-    <p>SL / TP: 50 / 100 pips (1:2)</p>
-    <p>Timeframe: &lt; 5M</p>
-
-    <p class="rule">Rule: 3 loss STOP · 2 win DONE</p>
+  <div class="header">
+    <div class="logo">Trading Plan</div>
   </div>
+
+  <div class="card">
+    <div class="item">Modal: <b>$1.500</b></div>
+    <div class="item">Lot: <b>0.01</b></div>
+    <div class="item">Risk: <b>$15 / hari</b> (3x loss)</div>
+    <div class="item">Risk / trade: <b>$5</b></div>
+    <div class="item">SL / TP: <b>50 / 100 pips</b> (1:2)</div>
+    <div class="item">Timeframe: <b>&lt; 5M</b></div>
+
+    <div class="rule">
+      3 LOSS = STOP · 2 WIN = DONE
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <a href="https://wa.me/6287777788565" target="_blank" class="cta-btn">
+      HUBUNGI UNTUK TRADING PLAN
+    </a>
+    <div class="cta-note">
+      Konsultasi setup & risk management
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
